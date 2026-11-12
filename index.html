@@ -102,6 +102,16 @@
       .reveal-content{font-size:clamp(2.8rem,9vw,3.6rem);line-height:1.48;padding:1.4rem .25rem}
     }
     @media(max-width:600px) and (max-height:540px){.cinema{padding:2.8rem .25rem .45rem}.cinema-frame{width:min(88vw,55vh,460px);height:min(88vw,55vh,460px)}.cinema-caption{margin:.35rem 0}.cinema-controls button{width:42px;height:42px}.cinema-controls #togglePlay{width:48px;height:48px}}
+    @media(max-width:600px){
+      /* The PNG artwork has generous transparent margins; enlarge the artwork itself. */
+      .photo-stage{transform:scale(1.55);transform-origin:center;max-width:none;max-height:none}
+      .cinema-caption{font-size:1.35rem}
+      .cinema-caption span:first-child{font-size:.85rem}
+      .cinema-controls button{width:58px;height:58px;font-size:1.45rem}
+      .cinema-controls #togglePlay{width:66px;height:66px}
+      .reveal-content{font-size:clamp(3.1rem,10vw,3.8rem);line-height:1.48}
+    }
+    @media(max-width:600px) and (max-height:540px){.cinema-controls button{width:48px;height:48px}.cinema-controls #togglePlay{width:56px;height:56px}.photo-stage{transform:scale(1.28)}}
     @media(prefers-reduced-motion:reduce){.reveal,.global-hearts span,.floating-hearts span,.love-pattern span{animation:none!important}}
   </style>
 </head>
