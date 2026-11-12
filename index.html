@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8eee9">
+  <title>Para Thais, com amor</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+    @font-face{font-family:'Alista Script';src:url('AlistaScript.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+    :root{--ink:#382c31;--muted:#75656b;--rose:#a85d69;--wine:#733f50;--paper:#fffaf7;--blush:#f4e4df;--line:#e9d6d1;--gold:#bb9465}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif}a{color:inherit}.serif{font-family:'Playfair Display',Georgia,serif}.eyebrow{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);font-weight:600}
+    .hero{min-height:100svh;display:grid;place-items:center;position:relative;overflow:hidden;padding:5rem 1.5rem;background:radial-gradient(ellipse at 50% 20%,#fffaf7 0,#f7e9e4 49%,#edd8d2 100%)}
+    .hero:before,.hero:after{content:'✿';position:absolute;color:#b26e78;opacity:.15;font-size:18rem;line-height:1}.hero:before{left:-4rem;top:-3rem;transform:rotate(-20deg)}.hero:after{right:-5rem;bottom:-6rem;transform:rotate(25deg)}
+    .hero-card{position:relative;z-index:1;text-align:center;max-width:760px;padding:clamp(2rem,7vw,5rem);border:1px solid #fff9;border-radius:48% 48% 8px 8px;background:#fff9;box-shadow:0 25px 80px #70444b13;backdrop-filter:blur(5px)}
+    .tiny-heart{font-size:1.4rem;color:var(--rose);margin-bottom:1.25rem}.hero h1{font-size:clamp(3.6rem,10vw,7.5rem);font-weight:500;line-height:.95;letter-spacing:-.055em;margin:.8rem 0 1rem}.hero h1 em{color:var(--rose);font-weight:500}.hero p{font-size:1.05rem;color:var(--muted);line-height:1.8;margin:1rem auto 2rem;max-width:460px}.date{display:inline-flex;align-items:center;gap:.65rem;color:var(--wine);letter-spacing:.08em;font-size:.78rem}.date:before,.date:after{content:'';width:28px;height:1px;background:var(--gold)}.button{display:inline-block;text-decoration:none;background:var(--wine);color:#fff;padding:.95rem 1.5rem;border-radius:999px;font-size:.85rem;transition:transform .2s,background .2s}.button:hover{transform:translateY(-2px);background:#5e3342}.scroll{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+    section{padding:6rem 1.5rem}.wrap{width:min(1050px,100%);margin:auto}.section-head{text-align:center;max-width:620px;margin:0 auto 3rem}.section-head h2{font-size:clamp(2.4rem,6vw,4rem);line-height:1.08;font-weight:500;margin:.7rem 0 1rem;letter-spacing:-.035em}.section-head p{color:var(--muted);line-height:1.8}
+    .memories{background:#fff}.photo-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.photo{aspect-ratio:4/5;border-radius:8px;overflow:hidden;background:linear-gradient(145deg,#f2e5e1,#e8d0ca);position:relative;display:grid;place-items:center;color:#956d70;text-align:center;padding:1rem}.photo:nth-child(3n+2){transform:translateY(18px)}.photo span{font-family:'Playfair Display',serif;font-style:italic;font-size:1rem}.photo small{display:block;font: .65rem 'DM Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;margin-top:.5rem;color:#98777a}.photo img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.photo .caption{display:none}
+    .timeline{background:#f8eee9}.timeline-list{max-width:720px;margin:auto;position:relative}.timeline-list:before{content:'';position:absolute;top:8px;bottom:8px;left:18px;width:1px;background:#d8b8b1}.moment{display:grid;grid-template-columns:38px 1fr;gap:1.5rem;position:relative;padding-bottom:2rem}.dot{width:11px;height:11px;background:var(--rose);border:3px solid #f8eee9;border-radius:50%;margin:4px auto;box-shadow:0 0 0 1px var(--rose)}.moment-card{border-bottom:1px solid var(--line);padding:0 0 1.5rem}.moment time{color:var(--rose);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}.moment h3{font:500 1.65rem 'Playfair Display',serif;margin:.45rem 0}.moment p{color:var(--muted);line-height:1.75;margin:0}
+    .letter{background:var(--paper)}.letter-card{max-width:760px;margin:auto;padding:clamp(2rem,7vw,5rem);background:#fff;border:1px solid var(--line);box-shadow:0 20px 70px #70444b0a;position:relative}.letter-card:before{content:'“';position:absolute;left:1rem;top:.2rem;font:7rem 'Playfair Display',serif;color:#f0ded9}.letter-card .letter-body{position:relative;font:clamp(1.1rem,2.1vw,1.35rem)/1.95 'Playfair Display',serif;color:#57464b;white-space:pre-line}.signature{color:var(--rose);font:italic 1.4rem 'Playfair Display',serif;margin-top:2rem}
+    .surprise{background:#603747;color:#fff;text-align:center;position:relative;overflow:hidden}.surprise:before{content:'♡';position:absolute;font-size:28rem;line-height:1;opacity:.035;left:50%;top:50%;transform:translate(-50%,-45%)}.surprise .wrap{position:relative}.surprise .eyebrow{color:#e7bdab}.surprise h2{font:500 clamp(3rem,8vw,5.5rem)/1.02 'Playfair Display',serif;margin:1rem 0}.surprise p{color:#f2e1e1;line-height:1.8;max-width:550px;margin:0 auto 2rem}.reveal{border:1px solid #d9b5ae;background:transparent;color:white;border-radius:999px;padding:.95rem 1.45rem;font:inherit;cursor:pointer;transition:.2s}.reveal:hover{background:#ffffff18}.reveal-content{display:none;margin:2rem auto 0;max-width:620px;padding:1.5rem;border-top:1px solid #ffffff3b;color:#fff3e9;font:italic 1.55rem/1.6 'Playfair Display',serif}.reveal-content.show{display:block;animation:fade .8s ease}@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    footer{text-align:center;padding:1.5rem;color:#9c8588;font-size:.75rem;letter-spacing:.06em;background:var(--paper)}
+    @media(max-width:760px){.photo-grid{grid-template-columns:repeat(3,1fr);gap:9px}.photo:nth-child(3n+2){transform:none}.hero-card{border-radius:45% 45% 8px 8px}.scroll{display:none}}
+    @media(max-width:420px){.photo-grid{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:3.6rem}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+    .upload-control{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:.65rem;margin:0 auto 2rem;width:fit-content;max-width:100%;border:1px solid var(--line);border-radius:999px;padding:.75rem 1.1rem;color:var(--wine);font-size:.85rem;cursor:pointer}.upload-control span{font-size:.72rem;color:var(--muted)}
+    .photo{cursor:pointer;border:9px solid #fff;border-bottom-width:25px;box-shadow:0 7px 22px #55333b18;transition:transform .6s cubic-bezier(.2,.7,.2,1),box-shadow .6s;will-change:transform}.photo:before,.photo:after{content:'';position:absolute;z-index:2;left:0;right:0;height:7px;background:radial-gradient(circle,#d8c1b5 2px,transparent 2.5px) 0 0/22px 7px repeat-x;opacity:.75}.photo:before{top:-8px}.photo:after{bottom:-24px}.photo:hover{transform:translateY(-7px) rotate(-1deg) scale(1.025);box-shadow:0 16px 34px #55333b25}.photo:nth-child(3n+2):hover{transform:translateY(10px) rotate(1deg) scale(1.025)}.photo img{transition:transform 5s ease}.photo:hover img{transform:scale(1.07)}.photo span{position:absolute;bottom:-22px;z-index:1;color:#715158;text-shadow:0 1px 5px #fff;font-size:.78rem}.photo span small{display:none}.film-action{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:1rem;margin:3rem auto 0}.film-action span{color:var(--muted);font-size:.78rem}.cinema{position:fixed;inset:0;z-index:10;background:radial-gradient(ellipse at 50% 42%,#684454 0,#281d24 75%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4rem 1.2rem 2rem;opacity:0;visibility:hidden;transition:opacity .55s,visibility .55s}.cinema.open{opacity:1;visibility:visible}.cinema-close{position:absolute;top:1.2rem;right:1.5rem;border:0;background:none;color:white;font-size:2.3rem;cursor:pointer}.cinema-frame{width:min(850px,90vw);height:min(62vh,570px);padding:23px 23px 32px;background:#f4e9db;border:1px solid #fff9;box-shadow:0 30px 100px #0007;position:relative;transform:scale(.97);transition:transform .8s cubic-bezier(.2,.7,.2,1)}.cinema.open .cinema-frame{transform:scale(1)}.film-holes{height:11px;position:absolute;left:16px;right:16px;top:7px;background:radial-gradient(ellipse,#523a3d 0 4px,transparent 4.5px) 0 0/27px 11px repeat-x}.film-holes.bottom{top:auto;bottom:8px}.cinema-image-wrap{height:100%;width:100%;overflow:hidden;background:#382c31;position:relative}.cinema-image-wrap img{height:100%;width:100%;object-fit:contain;position:absolute;inset:0;opacity:1;transform:scale(1);transition:opacity .65s ease,transform 5s ease}.cinema-image-wrap img.changing{opacity:0;transform:scale(1.035)}.cinema-caption{display:flex;gap:1rem;align-items:center;color:#f8ebe2;margin:1.2rem 0 .8rem;font:italic 1.15rem 'Playfair Display',serif}.cinema-caption span:first-child{color:#d9b5ae;font:600 .68rem 'DM Sans',sans-serif;letter-spacing:.12em}.cinema-controls{display:flex;align-items:center;gap:.8rem}.cinema-controls button{width:42px;height:42px;border:1px solid #ffffff60;border-radius:50%;background:#ffffff0d;color:#fff;font-size:1.15rem;cursor:pointer;transition:background .2s,transform .2s}.cinema-controls button:hover{background:#ffffff26;transform:scale(1.05)}.cinema-controls #togglePlay{width:50px;height:50px;background:#ffffff18}
+    .photo:before{top:3px}.photo:after{bottom:3px}.photo span{bottom:11px;left:0;right:0;color:#715158;text-shadow:none;font-size:.72rem}.photo:hover{transform:translateY(-7px) rotate(-1deg) scale(1.025)}.photo:nth-child(3n+2):hover{transform:translateY(10px) rotate(1deg) scale(1.025)}
+    .photo-grid{display:none!important}.film-holes{display:none}.cinema{background:#4d3341}.cinema-frame{width:min(620px,88vw);height:min(62vh,560px);padding:0;background:transparent;border:0;box-shadow:none;display:grid;place-items:center}.heart-video{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 22px 36px #0008)}.heart-video image{opacity:1;transition:opacity .7s ease}.heart-video image.changing{opacity:0}.heart-border{fill:none;stroke:#edb1bd;stroke-width:9;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 8px #ffc2d6)}.photo-mat{fill:#f5e8e4;stroke:#fff;stroke-width:5}.floating-hearts{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}.floating-hearts span{position:absolute;bottom:-3rem;color:#f1c6d0;opacity:0;font-size:clamp(1rem,2vw,1.8rem);animation:rise 12s linear infinite}.floating-hearts span:nth-child(1){left:7%;animation-delay:0s}.floating-hearts span:nth-child(2){left:19%;animation-delay:4s;font-size:1.2rem}.floating-hearts span:nth-child(3){left:31%;animation-delay:8s}.floating-hearts span:nth-child(4){left:43%;animation-delay:2s;font-size:1.4rem}.floating-hearts span:nth-child(5){left:56%;animation-delay:6s}.floating-hearts span:nth-child(6){left:68%;animation-delay:1s;font-size:1.1rem}.floating-hearts span:nth-child(7){left:79%;animation-delay:7s}.floating-hearts span:nth-child(8){left:91%;animation-delay:3s;font-size:1.5rem}.cinema-frame,.cinema-caption,.cinema-controls,.cinema-close{z-index:1}.cinema-caption span:first-child{color:#edb1bd}
+    @keyframes rise{0%{transform:translate3d(0,0,0) rotate(-10deg) scale(.8);opacity:0}12%{opacity:.55}75%{opacity:.38}100%{transform:translate3d(16px,-115vh,0) rotate(24deg) scale(1.35);opacity:0}}
+    .reveal-content{max-width:760px;font:italic clamp(1rem,2.2vw,1.25rem)/1.85 'Playfair Display',serif;text-align:left;font-family:'Alista Script',cursive;font-style:normal;font-size:clamp(1.5rem,3vw,2rem);line-height:1.6}
+    .heart-video .heart-backdrop{opacity:.48;filter:blur(16px);transition:opacity .7s ease}
+    @media(max-width:600px){.cinema{padding:3.5rem 1rem 1.4rem}.cinema-frame{width:94vw;height:50vh}.cinema-caption{font-size:1rem}.film-action{gap:.6rem}.film-action span{text-align:center}}
+    :root{--ink:#3b2d33;--muted:#806d73;--rose:#b45f6e;--wine:#784252;--paper:#f2e3df;--blush:#f7ece9;--line:#e7cfca;--gold:#bd8c69}
+    html,body{background:var(--paper)}
+    section,.memories,.timeline,.letter,.surprise,footer{background:transparent;color:var(--ink)}
+    .hero{background:var(--paper)}
+    .hero-card{width:min(760px,100%);max-width:none;min-height:min(700px,96svh);padding:clamp(7rem,13vh,9rem) clamp(4rem,11vw,7rem) clamp(8rem,15vh,10rem);display:flex;flex-direction:column;justify-content:center;align-items:center;border:0;border-radius:0;background:transparent;box-shadow:none;backdrop-filter:none;z-index:2}
+    .hero-card:before{content:'';position:absolute;inset:0;z-index:0;background:#fffbfa;clip-path:polygon(50% 96%,18% 64%,7% 53%,2% 43%,1% 34%,4% 25%,11% 17%,20% 12%,29% 12%,38% 16%,45% 12%,50% 18%,55% 12%,62% 16%,71% 12%,80% 12%,89% 17%,96% 25%,99% 34%,98% 43%,93% 53%,82% 64%);filter:drop-shadow(0 18px 24px #80505b26)}
+    .hero-card>*{position:relative;z-index:1}.hero-card .tiny-heart{transform:translateY(1.7rem)}
+    .hero h1{font-size:clamp(3.3rem,8.5vw,7.2rem)}
+    .wrap{position:relative;z-index:2}
+    .memories,.timeline,.letter,.surprise{background:transparent}
+    .timeline-list:before{background:#d9adb1}.moment-card{border-color:#dfc3bf}.dot{border-color:var(--paper)}
+    .surprise{color:var(--ink)}.surprise:before{display:none}.surprise .eyebrow{color:var(--rose)}.surprise p{color:var(--muted)}
+    .reveal{background:var(--wine);border-color:var(--wine);color:#fff;animation:button-pulse 1.8s ease-in-out infinite;box-shadow:0 7px 22px #78425235}
+    .reveal:hover{background:#633443;transform:scale(1.05)}
+    @keyframes button-pulse{0%,100%{transform:scale(1);box-shadow:0 7px 22px #78425230}50%{transform:scale(1.055);box-shadow:0 10px 28px #b45f6e65}}
+    .reveal-content{color:var(--ink);border-top-color:#d8b2b5}
+    footer{position:relative;z-index:2;color:#856b70}
+    .global-hearts{position:fixed;inset:0;z-index:1;overflow:hidden;pointer-events:none}
+    .global-hearts span{position:absolute;bottom:-4rem;left:var(--x);font-size:var(--s);opacity:0;animation:rise 13s linear infinite;animation-delay:var(--d);filter:drop-shadow(0 2px 4px #a6637430)}
+    .cinema{background:var(--paper);color:var(--ink)}.cinema-close{color:var(--wine)}.cinema-caption{color:var(--ink)}.cinema-controls button{border-color:#8c566270;background:#ffffff55;color:var(--wine)}.cinema-controls button:hover{background:#fff}.cinema-controls #togglePlay{background:#fff9}
+    .love-pattern{position:absolute;inset:-2%;z-index:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(82px,1fr));grid-auto-rows:minmax(42px,1fr);justify-items:center;align-items:center;align-content:stretch;overflow:hidden;pointer-events:none}.love-pattern span{color:#49343a;opacity:.28;font-size:.66rem;letter-spacing:.13em;font-weight:700;transform:rotate(var(--angle,0deg));white-space:nowrap;animation:love-wave 3.2s ease-in-out infinite;animation-delay:var(--wave-delay,0s)}.love-pattern span:nth-child(4n){opacity:.2}.love-pattern span:nth-child(7n){font-size:.58rem}
+    @keyframes love-wave{0%,100%{translate:0 -4px}50%{translate:0 4px}}
+    .cinema-frame{width:min(600px,80vw);height:min(600px,65vh);padding:0;background:transparent;border:0;box-shadow:none}.photo-stage{width:100%;height:100%;filter:none}.photo-stage image{opacity:1;transition:opacity .7s ease}.photo-stage image.changing{opacity:0}
+    .floating-hearts{z-index:0}.floating-hearts span{color:#b45f6e;filter:drop-shadow(0 2px 4px #a6637430)}
+    .photo-mat{fill:#fff;stroke:#fff;stroke-width:8}.heart-border{stroke:#e898aa;stroke-width:10;filter:drop-shadow(0 0 7px #cf8296)}
+    @media(max-width:760px){.hero-card{min-height:650px;padding:7rem 3.5rem 8.5rem;border-radius:0}.hero h1{font-size:clamp(2.8rem,11vw,3.8rem)}}
+    @media(max-width:420px){.hero-card{min-height:620px;padding:7rem 2.6rem 8rem}.hero h1{font-size:clamp(2.7rem,11vw,3.4rem)}}
+    @media(max-width:600px){.cinema{padding:3.2rem .75rem .9rem}.cinema-frame{width:min(88vw,56vh,460px);height:min(88vw,56vh,460px);padding:0;background:transparent;border:0;box-shadow:none}.cinema-close{top:.45rem;right:.7rem;font-size:2rem}.cinema-caption{gap:.6rem;margin:.8rem 0 .5rem;font-size:.95rem}.cinema-controls{gap:.65rem}.cinema-controls button{width:40px;height:40px}.cinema-controls #togglePlay{width:46px;height:46px}.section{padding:4rem 1rem}}
+    @media(max-width:600px) and (max-height:540px){.cinema{padding:2.8rem .5rem .5rem}.cinema-frame{width:min(80vw,46vh,400px);height:min(80vw,46vh,400px)}.cinema-caption{margin:.4rem 0}.cinema-controls button{width:36px;height:36px}}
+    @media(prefers-reduced-motion:reduce){.reveal,.global-hearts span,.floating-hearts span,.love-pattern span{animation:none!important}}
+  </style>
+</head>
+<body>
+  <div class="global-hearts" aria-hidden="true"><span style="--x:4%;--s:1.2rem;--d:0s">💕</span><span style="--x:14%;--s:1.7rem;--d:5s">💗</span><span style="--x:25%;--s:1rem;--d:2s">💖</span><span style="--x:37%;--s:1.5rem;--d:8s">💞</span><span style="--x:49%;--s:1.1rem;--d:4s">💓</span><span style="--x:61%;--s:1.8rem;--d:1s">💕</span><span style="--x:72%;--s:1.2rem;--d:7s">💘</span><span style="--x:83%;--s:1.6rem;--d:3s">❤️</span><span style="--x:94%;--s:1rem;--d:9s">💗</span></div>
+  <header class="hero" id="inicio">
+    <div class="hero-card">
+      <div class="tiny-heart" aria-hidden="true">♡</div>
+      <div class="eyebrow">13 de novembro de 2026</div>
+      <h1 class="serif">Thais,<br><em>meu amor</em></h1>
+      <p>Quatro anos de nós. Uma pequena surpresa para celebrar tudo o que vivemos — e tudo o que ainda vamos viver.</p>
+      <div class="date">4 anos juntos</div>
+      <p style="margin:2rem auto 0"><a class="button" href="#memorias">Começar nossa história ↓</a></p>
+    </div>
+    <div class="scroll">feito com amor · role para descobrir</div>
+  </header>
+  <main>
+    <section class="memories" id="memorias">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Pequenos grandes momentos</div><h2 class="serif">Um vídeo de nós</h2></div>
+        <div class="film-action"><button class="button" id="playMemories">▶ Assistir às nossas lembranças</button></div>
+        <div class="photo-grid" id="photoGrid" aria-hidden="true"></div>
+      </div>
+    </section>
+    <section class="timeline" id="nossa-historia">
+      <div class="wrap"><div class="section-head"><div class="eyebrow">Capítulos da nossa história</div><h2 class="serif">E foi assim que chegamos até aqui</h2><p>Uma linha do tempo para os momentos que merecem ser lembrados para sempre.</p></div>
+        <div class="timeline-list" id="timelineList"></div>
+      </div>
+    </section>
+    <section class="surprise" id="surpresa">
+      <div class="wrap"><div class="eyebrow">Tem mais uma coisinha…</div><h2>Para você,<br>Thais.</h2><p>Preparei uma última surpresa. Abra quando estiver pronta, meu amor.</p><button class="reveal" id="revealBtn" aria-expanded="false">Revelar surpresa ♡</button><div class="reveal-content" id="revealContent">Meu amor, enfim, 4 anos... De uma história que parecia que iria acabar logo no começo, mas que se sustentou até hoje, com muitos momentos de brincadeiras, risadas, carinhos e, o mais importante de tudo, nossa conexão. Somos opostos, mas ao mesmo tempo parecemos iguais.<br><br>Bom, eu queria ter te presenteado com algo melhor... Mas, infelizmente, a grana está curta, né? Kkk. Mas lembro que você sempre me diz que o importante é o que fazemos com amor e demonstração do mesmo... Então, pensei: por que não criar isso para que fique nas nossas memórias?<br><br>Minha vida, eu só tenho a agradecer a Deus por ter colocado uma mulher tão inteligente e compreensível em minha vida, que, apesar dos apesares, não me abandonou e fez o contrário: me acolheu cada vez mais e me mostrou que ainda é possível amar e ser amado sem ter que ser o único a buscar a confirmação de amor da sua parceira. Queria agradecer também a você, que vem me ensinando muitas coisas, agradecer o tanto que evoluiu por nós e para minha filha, o quanto você é querida com todos à sua volta e, principalmente, com minha família. Eu sinto que ganhei na Mega.<br><br>Enfim, que possamos comemorar muitos e muitos mais anos e realizar sua vontade de sermos dois velhinhos gagás, sentados numa varanda e fazendo piadas ruins de nós mesmos... Essa é a vida que quero pra mim, sempre ao seu lado! Feliz 4 Anos, Eu Te Amo Muito!</div></div>
+    </section>
+  </main>
+  <div class="cinema" id="cinema" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Apresentação de fotos">
+    <div class="love-pattern" id="lovePattern" aria-hidden="true"></div>
+    <div class="floating-hearts" aria-hidden="true"><span>♡</span><span>♥</span><span>♡</span><span>♥</span><span>♡</span><span>♥</span><span>♡</span><span>♥</span></div>
+    <button class="cinema-close" id="cinemaClose" aria-label="Fechar apresentação">×</button>
+    <div class="cinema-frame"><svg class="photo-stage" viewBox="0 0 600 600" role="img" aria-label="Fotos com as molduras editadas"><image id="cinemaImage" x="0" y="0" width="600" height="600" preserveAspectRatio="xMidYMid meet"/></svg></div>
+    <div class="cinema-caption"><span id="cinemaCount">01 / 15</span><span id="cinemaTitle">Uma lembrança nossa</span></div>
+    <div class="cinema-controls"><button id="previousPhoto" aria-label="Foto anterior">←</button><button id="togglePlay" aria-label="Pausar apresentação">Ⅱ</button><button id="nextPhoto" aria-label="Próxima foto">→</button></div>
+  </div>
+  <audio id="soundtrack" src="musica.mp3" preload="metadata" loop></audio>
+  <footer>feito com carinho para celebrar 4 anos de amor · 13.11.2026</footer>
+  <script>
+    const photoGrid=document.getElementById('photoGrid');
+    for(let i=1;i<=15;i++){
+      const card=document.createElement('div');card.className='photo';
+      const img=document.createElement('img');img.src=`${i}.png`;img.alt=`Foto ${i}`;
+      const label=document.createElement('span');label.innerHTML=`Nossa lembrança<small>foto ${String(i).padStart(2,'0')}</small>`;
+      card.append(img,label);photoGrid.appendChild(card);
+    }
+    const moments=[
+      ['O começo de tudo','Ano 1','Toda história bonita começa com um primeiro capítulo. O nosso já me deu quatro anos de motivos para agradecer.'],
+      ['Tudo que fomos construindo','Ano 2','Entre dias comuns e momentos especiais, fomos fazendo caber cada vez mais carinho na palavra “nós”.'],
+      ['Mais perto, mais nós','Ano 3','O tempo passa, e continua sendo bom escolher você para dividir a vida, os planos e os sorrisos.'],
+      ['Hoje: quatro anos de nós','13 nov. 2026','Quatro anos juntos. E a melhor parte da nossa história ainda está por vir.']
+    ];
+    const timeline=document.getElementById('timelineList');
+    moments.forEach(([title,date,copy])=>{const item=document.createElement('article');item.className='moment';item.innerHTML=`<div class="dot" aria-hidden="true"></div><div class="moment-card"><time>${date}</time><h3>${title}</h3><p>${copy}</p></div>`;timeline.appendChild(item)});
+    const cinema=document.getElementById('cinema'),cinemaImage=document.getElementById('cinemaImage'),soundtrack=document.getElementById('soundtrack');
+    const lovePattern=document.getElementById('lovePattern');
+    for(let i=0;i<240;i++){const word=document.createElement('span');word.textContent='TE AMO';word.style.setProperty('--angle',`${((i*7)%11-5)*2}deg`);word.style.setProperty('--wave-delay',`${-(i%12)*.18}s`);lovePattern.appendChild(word)}
+    const photoCards=()=>Array.from(photoGrid.querySelectorAll('.photo img'));
+    let currentPhoto=0,playTimer=null,playing=false,changeTimer=null;
+    function showPhoto(index){const photos=photoCards();if(!photos.length)return;currentPhoto=(index+photos.length)%photos.length;const source=photos[currentPhoto];cinemaImage.classList.add('changing');clearTimeout(changeTimer);changeTimer=setTimeout(()=>{cinemaImage.setAttribute('href',source.src);cinemaImage.setAttribute('aria-label',`Foto ${currentPhoto+1}`);cinemaImage.classList.remove('changing');document.getElementById('cinemaCount').textContent=`${String(currentPhoto+1).padStart(2,'0')} / ${String(photos.length).padStart(2,'0')}`;document.getElementById('cinemaTitle').textContent=`Uma lembrança nossa · ${currentPhoto+1}`},280)}
+    function setPlaying(value){playing=value;clearInterval(playTimer);document.getElementById('togglePlay').textContent=playing?'Ⅱ':'▶';document.getElementById('togglePlay').setAttribute('aria-label',playing?'Pausar apresentação':'Continuar apresentação');if(playing){soundtrack.play().catch(()=>{});playTimer=setInterval(()=>{const photos=photoCards();const duration=Number.isFinite(soundtrack.duration)&&soundtrack.duration>0?soundtrack.duration:65;const target=Math.min(photos.length-1,Math.floor((soundtrack.currentTime%duration)/duration*photos.length));if(target!==currentPhoto)showPhoto(target)},100)}else soundtrack.pause()}
+    function openCinema(index=0,autoplay=true){if(autoplay)soundtrack.currentTime=0;showPhoto(index);cinema.classList.add('open');cinema.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';setPlaying(autoplay);document.getElementById('cinemaClose').focus()}
+    function closeCinema(){cinema.classList.remove('open');cinema.setAttribute('aria-hidden','true');document.body.style.overflow='';setPlaying(false);soundtrack.currentTime=0;document.getElementById('playMemories').focus()}
+    document.getElementById('playMemories').addEventListener('click',()=>openCinema(0,true));
+    document.getElementById('cinemaClose').addEventListener('click',closeCinema);
+    document.getElementById('previousPhoto').addEventListener('click',()=>showPhoto(currentPhoto-1));
+    document.getElementById('nextPhoto').addEventListener('click',()=>showPhoto(currentPhoto+1));
+    document.getElementById('togglePlay').addEventListener('click',()=>setPlaying(!playing));
+    cinema.addEventListener('click',event=>{if(event.target===cinema)closeCinema()});
+    document.addEventListener('keydown',event=>{if(!cinema.classList.contains('open'))return;if(event.key==='Escape')closeCinema();if(event.key==='ArrowRight')showPhoto(currentPhoto+1);if(event.key==='ArrowLeft')showPhoto(currentPhoto-1);if(event.code==='Space'){event.preventDefault();setPlaying(!playing)}});
+    document.getElementById('revealBtn').addEventListener('click',function(){const c=document.getElementById('revealContent');c.classList.toggle('show');this.setAttribute('aria-expanded',c.classList.contains('show'));this.textContent=c.classList.contains('show')?'Guardar por enquanto ♡':'Revelar surpresa ♡'});
+  </script>
+</body>
+</html>
